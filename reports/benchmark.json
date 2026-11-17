@@ -1,0 +1,134 @@
+[
+  {
+    "scenario": "identical_loop",
+    "baseline": "none",
+    "executed_tool_calls": 20,
+    "attempted_tool_calls": 20,
+    "declared_usd": 0.2,
+    "termination": "completed",
+    "elapsed_ms": 67.85110000055283,
+    "budget_usd": 0.025,
+    "within_budget": false
+  },
+  {
+    "scenario": "identical_loop",
+    "baseline": "official",
+    "executed_tool_calls": 2,
+    "attempted_tool_calls": 20,
+    "declared_usd": 0.02,
+    "termination": "guard_stop",
+    "elapsed_ms": 19.93950002361089,
+    "budget_usd": 0.025,
+    "within_budget": true
+  },
+  {
+    "scenario": "identical_loop",
+    "baseline": "full",
+    "executed_tool_calls": 2,
+    "attempted_tool_calls": 20,
+    "declared_usd": 0.02,
+    "termination": "guard_stop",
+    "elapsed_ms": 68.50460002897307,
+    "budget_usd": 0.025,
+    "within_budget": true
+  },
+  {
+    "scenario": "expensive_tool_spike",
+    "baseline": "none",
+    "executed_tool_calls": 10,
+    "attempted_tool_calls": 10,
+    "declared_usd": 2.0,
+    "termination": "completed",
+    "elapsed_ms": 33.0186000210233,
+    "budget_usd": 0.5,
+    "within_budget": false
+  },
+  {
+    "scenario": "expensive_tool_spike",
+    "baseline": "official",
+    "executed_tool_calls": 2,
+    "attempted_tool_calls": 10,
+    "declared_usd": 0.4,
+    "termination": "guard_stop",
+    "elapsed_ms": 14.579200011212379,
+    "budget_usd": 0.5,
+    "within_budget": true
+  },
+  {
+    "scenario": "expensive_tool_spike",
+    "baseline": "full",
+    "executed_tool_calls": 2,
+    "attempted_tool_calls": 10,
+    "declared_usd": 0.4,
+    "termination": "guard_stop",
+    "elapsed_ms": 33.852700027637184,
+    "budget_usd": 0.5,
+    "within_budget": true
+  },
+  {
+    "scenario": "short_loop",
+    "baseline": "none",
+    "executed_tool_calls": 5,
+    "attempted_tool_calls": 5,
+    "declared_usd": 0.05,
+    "termination": "completed",
+    "elapsed_ms": 16.08259999193251,
+    "budget_usd": 0.025,
+    "within_budget": false
+  },
+  {
+    "scenario": "short_loop",
+    "baseline": "official",
+    "executed_tool_calls": 2,
+    "attempted_tool_calls": 5,
+    "declared_usd": 0.02,
+    "termination": "guard_stop",
+    "elapsed_ms": 9.027699998114258,
+    "budget_usd": 0.025,
+    "within_budget": true
+  },
+  {
+    "scenario": "short_loop",
+    "baseline": "full",
+    "executed_tool_calls": 2,
+    "attempted_tool_calls": 5,
+    "declared_usd": 0.02,
+    "termination": "guard_stop",
+    "elapsed_ms": 16.72160002635792,
+    "budget_usd": 0.025,
+    "within_budget": true
+  },
+  {
+    "scenario": "mixed_cost_spike",
+    "baseline": "none",
+    "executed_tool_calls": 10,
+    "attempted_tool_calls": 10,
+    "declared_usd": 0.40800000000000003,
+    "termination": "completed",
+    "elapsed_ms": 32.97860000748187,
+    "budget_usd": 0.25,
+    "within_budget": false
+  },
+  {
+    "scenario": "mixed_cost_spike",
+    "baseline": "official",
+    "executed_tool_calls": 10,
+    "attempted_tool_calls": 10,
+    "declared_usd": 0.40800000000000003,
+    "termination": "completed",
+    "elapsed_ms": 38.43920002691448,
+    "budget_usd": 0.25,
+    "within_budget": false
+  },
+  {
+    "scenario": "mixed_cost_spike",
+    "baseline": "full",
+    "executed_tool_calls": 9,
+    "attempted_tool_calls": 10,
+    "declared_usd": 0.20800000000000002,
+    "termination": "guard_stop",
+    "elapsed_ms": 32.98909997101873,
+    "budget_usd": 0.25,
+    "within_budget": true
+  }
+]

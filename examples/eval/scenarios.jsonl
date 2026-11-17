@@ -1,0 +1,2 @@
+{"name": "cache_repeat", "calls": [["search_docs", {"text": "refund"}], ["search_docs", {"text": "refund"}], ["search_docs", {"text": "refund"}]], "tool_profiles": {"search_docs": {"usd_per_call": 0.01, "cacheable": true}}, "budget_usd": 1.0}
+{"name": "api_quota", "calls": [["parse_pdf", {"text": "doc"}], ["parse_pdf", {"text": "doc"}]], "tool_profiles": {"parse_pdf": {"usd_per_call": 0.0, "api_quota_per_call": 1}}, "budget_usd": 1.0, "api_quota_limit": 1}

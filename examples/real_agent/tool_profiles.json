@@ -1,0 +1,18 @@
+{
+  "search_docs": {
+    "usd_per_call": 0.001,
+    "db_queries_per_call": 1,
+    "db_cu_per_call": 0.01,
+    "cacheable": true,
+    "idempotent": true,
+    "ttl_seconds": 300
+  },
+  "lookup_order": {
+    "usd_per_call": 0.002,
+    "db_queries_per_call": 1,
+    "db_cu_per_call": 0.02,
+    "cacheable": true,
+    "idempotent": true,
+    "ttl_seconds": 60
+  }
+}

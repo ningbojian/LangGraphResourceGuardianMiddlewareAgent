@@ -1,0 +1,29 @@
+# local tooling / editor state
+.claude/
+.vscode/
+
+# Python / uv
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# test / type / lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# local runtime artifacts
+policies/versions/
+sessions/
+proposals/
+runs/
+*.sqlite
+*.sqlite3
+*.db
+.env
+.env.*
