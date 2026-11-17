@@ -2,6 +2,12 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
+[![CI](https://github.com/ningbojian/LangGraphResourceGuardianMiddlewareAgent/actions/workflows/ci.yml/badge.svg)](https://github.com/ningbojian/LangGraphResourceGuardianMiddlewareAgent/actions/workflows/ci.yml)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](pyproject.toml)
+[![Status: developer preview](https://img.shields.io/badge/status-developer%20preview-orange.svg)](ROADMAP.md)
+[![Reports](https://img.shields.io/badge/reports-GitHub%20Pages-0f766e.svg)](https://ningbojian.github.io/LangGraphResourceGuardianMiddlewareAgent/)
+
 **Developer-facing multi-resource guard and batch optimizer for LangGraph agents.**
 
 ## Why this exists

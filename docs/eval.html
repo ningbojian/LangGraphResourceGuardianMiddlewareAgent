@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>resguard optimization report</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         margin: 0; background: #f8fafc; color: #0f172a; }
+  main { max-width: 980px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 26px; margin: 0 0 6px; }
+  .muted { color: #64748b; font-size: 13px; }
+  .status { display:inline-block; padding: 4px 10px; border-radius: 999px;
+             font-size: 12px; font-weight: 700; letter-spacing: .04em; }
+  .status.accepted { background:#dcfce7; color:#166534; }
+  .status.rejected { background:#fee2e2; color:#991b1b; }
+  .kpis { display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+           gap: 12px; margin: 22px 0; }
+  .kpi { background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; }
+  .kpi.improved { border-color:#86efac; }
+  .kpi.regressed { border-color:#fca5a5; }
+  .kpi-label { font-size:12px; color:#64748b; text-transform:uppercase; letter-spacing:.04em; }
+  .kpi-value { font-size:24px; font-weight:700; margin-top:6px; }
+  .kpi-detail { font-size:12px; color:#64748b; margin-top:4px; }
+  .card { background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:18px;
+           margin:18px 0; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { text-align:left; padding:9px 8px; border-bottom:1px solid #e2e8f0; }
+  th { color:#475569; font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+  tr.improved td:nth-child(5) { color:#166534; font-weight:600; }
+  tr.regressed td:nth-child(5) { color:#991b1b; font-weight:600; }
+  .note { font-size:13px; color:#475569; line-height:1.6; }
+  code { background:#f1f5f9; padding:1px 5px; border-radius:4px; }
+</style>
+</head>
+<body><main>
+  <h1>resguard optimization report</h1>
+  <div class="muted">generated 2026-11-17T02:58:01.937967+00:00 · benchmark-bound comparison</div>
+  <p><span class="status accepted">ACCEPTED</span></p>
+
+  <div class="kpis">
+    <div class="kpi improved"><div class="kpi-label">Cost / success</div><div class="kpi-value">+57.5%</div><div class="kpi-detail">baseline 0.0400 → candidate 0.0170 USD</div></div>
+    <div class="kpi improved"><div class="kpi-label">Tool calls</div><div class="kpi-value">+50.0%</div><div class="kpi-detail">4.00 → 2.00 per success</div></div>
+    <div class="kpi flat"><div class="kpi-label">API quota</div><div class="kpi-value">+0.0%</div><div class="kpi-detail">1.00 → 1.00 per success</div></div>
+    <div class="kpi flat"><div class="kpi-label">Success / quality</div><div class="kpi-value">+0.0 / +0.0 pp</div><div class="kpi-detail">change must stay within tolerance</div></div>
+    <div class="kpi improved"><div class="kpi-label">Projected monthly savings</div><div class="kpi-value">$225.00</div><div class="kpi-detail">10,000 sessions/month, optimizer cost $5.00</div></div>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0;font-size:18px">Resource usage per successful task</h2>
+    <svg viewBox="0 0 760 192" role="img" aria-label="Before and after resource usage" style="width:100%;height:auto"><text x="8" y="44" font-size="13" fill="#334155">USD</text><rect x="170" y="26" width="3.8" height="16" rx="3" fill="#94a3b8"/><text x="179.8" y="38" font-size="11" fill="#475569">baseline 0.0400</text><rect x="170" y="46" width="1.6" height="16" rx="3" fill="#0f766e"/><text x="177.6" y="58" font-size="11" fill="#0f766e">candidate 0.0170</text><text x="8" y="98" font-size="13" fill="#334155">Tool calls</text><rect x="170" y="80" width="380.0" height="16" rx="3" fill="#94a3b8"/><text x="556.0" y="92" font-size="11" fill="#475569">baseline 4.00</text><rect x="170" y="100" width="190.0" height="16" rx="3" fill="#0f766e"/><text x="366.0" y="112" font-size="11" fill="#0f766e">candidate 2.00</text><text x="8" y="152" font-size="13" fill="#334155">API quota</text><rect x="170" y="134" width="95.0" height="16" rx="3" fill="#94a3b8"/><text x="271.0" y="146" font-size="11" fill="#475569">baseline 1.00</text><rect x="170" y="154" width="95.0" height="16" rx="3" fill="#0f766e"/><text x="271.0" y="166" font-size="11" fill="#0f766e">candidate 1.00</text></svg>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0;font-size:18px">Before / after</h2>
+    <table>
+      <thead><tr><th>Metric</th><th>Baseline</th><th>Candidate</th><th>Change</th><th>Status</th></tr></thead>
+      <tbody><tr class='improved'><td>USD</td><td>0.0400</td><td>0.0170</td><td>+57.5%</td><td>improved</td></tr><tr class='improved'><td>Tool calls</td><td>4.00</td><td>2.00</td><td>+50.0%</td><td>improved</td></tr><tr class='flat'><td>API quota</td><td>1.00</td><td>1.00</td><td>+0.0%</td><td>flat</td></tr><tr class='flat'><td>Success rate</td><td>50.0%</td><td>50.0%</td><td>+0.0 pp</td><td>flat</td></tr><tr class='flat'><td>Quality rate</td><td>50.0%</td><td>50.0%</td><td>+0.0 pp</td><td>flat</td></tr><tr class='flat'><td>False-positive stop rate</td><td>0.0%</td><td>0.0%</td><td>+0.0 pp</td><td>flat</td></tr></tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0;font-size:18px">Gate</h2>
+    <p class="note"><strong>Improvements:</strong> {&quot;usd&quot;: 0.575, &quot;tool_calls&quot;: 0.5}<br>
+    <strong>Reasons:</strong> []</p>
+    <p class="note">This report is generated from a benchmark/replay evaluation, not a production canary.
+    Treat the numbers as evidence about guard mechanics and policy trade-offs, not as a guaranteed
+    production saving. See <code>docs/DESIGN.md</code> for validity threats.</p>
+  </div>
+</main></body></html>
